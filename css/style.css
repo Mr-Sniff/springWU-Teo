@@ -16,7 +16,9 @@ body {
   background-color: var(--bg-color);
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   color: var(--text-color);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
@@ -35,11 +37,12 @@ header {
   border-bottom: 3px solid var(--text-color)
 }
 
-header > h1 {
+header>h1 {
   color: var(--text-color);
   margin-left: var(--text-margin);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);;
-  margin-top: .1em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  ;
+  margin-top: 0em;
 }
 
 #title-img-container {
@@ -64,9 +67,9 @@ header > h1 {
 
 /* the Buttons with information*/
 .preview-button {
+  max-width: 1920px;
   background: var(--accent-color);
   border-radius: var(--radius);
-  aspect-ratio: 1/.9;
   border: 1px solid transparent;
   margin: 1em;
   transition: border var(--main-transition)
@@ -81,7 +84,7 @@ header > h1 {
   color: var(--text-color);
   text-align: left;
   margin-left: 1em;
-  font-size: 7.0cqi;
+  font-size: 3.0em;
   margin-bottom: 0;
   margin-top: .1em;
   padding: calc(var(--padd)/2);
@@ -91,7 +94,7 @@ header > h1 {
 .preview-button p {
   color: var(--text-color);
   margin: var(--text-margin);
-  font-size: 4cqi;
+  font-size: 2em;
   margin-top: 0;
   margin-bottom: 0;
   padding: calc(var(--padd)*2);
@@ -109,6 +112,7 @@ header > h1 {
 #img1 {
   float: left;
 }
+
 #img2 {
   float: right;
 }
