@@ -48,8 +48,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 10000;
+  right: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   border-bottom: 3px solid var(--text-color);
@@ -59,8 +59,56 @@ header>h1 {
   color: var(--text-color);
   margin-left: var(--text-margin);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  ;
   margin-top: 0em;
+}
+
+header>#menu-toggle {
+  margin-right: 2rem;
+}
+
+#desktop-nav {
+  display: none;
+}
+
+#nav-pane {
+  display: none;
+}
+
+#nav-pane.active {
+  display: flex;
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+#mobile-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mobile-nav>a {
+  color: var(--text-color);
+  font-size: 2em;
+  text-align: right;
+  padding: 1rem;
+}
+
+#mobile-nav>a.hover {
+  color: var(--accent-color);
+}
+
+@media (min-width: 800px) {
+  #menu-toggle {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: block;
+  }
 }
 
 #title-img-container {
@@ -73,7 +121,8 @@ header>h1 {
   width: 120%;
   object-fit: cover;
   margin-left: -10%;
-  height: 20em;
+  min-height: 20em;
+  max-height: 40em;
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
@@ -138,9 +187,10 @@ header>h1 {
   float: right;
 }
 
-#img1,
-#img2 {
-  @media (max-width: 800px) {
+@media (max-width: 800px) {
+
+  #img1,
+  #img2 {
     float: none;
     width: 100%;
   }
