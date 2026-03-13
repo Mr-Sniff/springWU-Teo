@@ -92,15 +92,18 @@ header>#menu-toggle {
   flex-direction: column;
 }
 
-#mobile-nav>a {
+
+#mobile-nav>a,
+#desktop-nav>a {
   color: var(--text-color);
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: right;
   padding-right: 2.5rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
-#mobile-nav>a.hover {
+#mobile-nav>a.hover,
+#desktop-nav>a.hover {
   color: var(--accent-color);
 }
 
