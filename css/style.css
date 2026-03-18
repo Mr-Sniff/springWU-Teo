@@ -217,7 +217,7 @@ header>#menu-toggle {
 
 @media (max-width: 800px) {
   .photo_container {
-    columns: 1;
+    columns: 2;
   }
 }
 
