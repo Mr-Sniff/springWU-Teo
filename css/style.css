@@ -244,16 +244,16 @@ header>#menu-toggle {
 }
 
 .portfolio_photo.fullscreen {
-  overflow: auto;
   position: fixed;
-  margin: auto;
-  max-width: 80%;
-  max-height: 80%;
-  /* bottom: 0; */
-  /* left: 0; */
-  /* right: 0; */
-  /* top: 0; */
-  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: min(90vw, 90vh);
+  height: auto;
+  max-width: none;
+  z-index: 1000;
+  cursor: zoom-out;
+  border-radius: 8px;
 }
 
 @media (min-width: 800px) {
