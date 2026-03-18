@@ -240,7 +240,7 @@ header>#menu-toggle {
   border: 2px solid;
   border-radius: 5px;
   border-color: var(--text-color);
-  transition: transform .1s ease;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1.9);
 }
 
 .portfolio_photo.fullscreen {
@@ -248,7 +248,7 @@ header>#menu-toggle {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: min(90vw, 90vh);
+  width: min(95vw, 95vh);
   height: auto;
   max-width: none;
   z-index: 1000;
@@ -257,8 +257,11 @@ header>#menu-toggle {
 }
 
 @media (min-width: 800px) {
- .portfolio_photo:hover {
-    transform: scale(1.2);
-  } 
-}
+  .portfolio_photo:not(.fullscreen) {
+    transition: transform .1s ease;
+  }
 
+  .portfolio_photo:not(.fullscreen):hover {
+    transform: scale(1.2);
+  }
+}
