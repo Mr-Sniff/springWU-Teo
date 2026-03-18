@@ -36,7 +36,8 @@ body {
 
 p,
 h1,
-h2 {
+h2,
+li {
   color: var(--text-color);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
@@ -53,6 +54,8 @@ header {
   display: flex;
   justify-content: space-between;
   border-bottom: 3px solid var(--text-color);
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.9);
+
 }
 
 header>h1 {
@@ -165,12 +168,16 @@ header>#menu-toggle {
   padding: calc(var(--padd)/2);
 }
 
-/* the paragrah in the buttons*/
-.preview-button p {
+p,
+li {
   color: var(--text-color);
   margin: var(--text-margin);
-  overflow: hidden;
   font-size: 1.5em;
+}
+
+/* the paragrah in the buttons*/
+.preview-button p {
+  overflow: hidden;
   margin-top: 0;
   margin-bottom: 0;
   padding: calc(var(--padd)*2);
@@ -222,6 +229,7 @@ header>#menu-toggle {
 }
 
 .portfolio_photo_title {
+  border-bottom: 4px solid var(--text-color);
   display: block;
   font-size: 2em;
   text-align: center;
@@ -236,7 +244,7 @@ header>#menu-toggle {
 .portfolio_photo {
   display: block;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   border: 2px solid;
   border-radius: 5px;
   border-color: var(--text-color);
@@ -264,4 +272,49 @@ header>#menu-toggle {
   .portfolio_photo:not(.fullscreen):hover {
     transform: scale(1.2);
   }
+}
+
+
+/* about */
+#about_body {
+  max-width: min(800px, 90vw);
+  /* border-left: 3px solid var(--text-color); */
+  /* border-right: 3px solid var(--text-color); */
+  /* background-color: var(--accent-color); */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#about_body>h2,
+#about_body>ul,
+#about_body>p {
+  margin-left: 1em;
+}
+
+#about_title_card {
+  margin-top: 5em;
+  padding: var(--padd);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'c d';
+}
+
+#about_card {
+  margin: 0 1em 0 1em;
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--accent-color);
+}
+
+#about_title_card>img {
+  border-radius: 200px;
+  border: solid 4px var(--text-color);
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
