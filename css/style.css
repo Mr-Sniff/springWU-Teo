@@ -219,14 +219,19 @@ li {
   width: min(1000px, 90%);
   columns: 3;
   margin: auto;
-  margin-top: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  border-bottom: 0;
 }
 
 @media (max-width: 800px) {
   .photo_container {
     columns: 2;
+    background: 0;
+    padding: 0;
   }
 }
+
 
 .portfolio_photo_title {
   border-bottom: 4px solid var(--text-color);
@@ -277,13 +282,18 @@ li {
 
 /* about */
 #about_body {
-  max-width: min(800px, 90vw);
-  /* border-left: 3px solid var(--text-color); */
-  /* border-right: 3px solid var(--text-color); */
-  /* background-color: var(--accent-color); */
+  width: min(1000px, 90vw);
+  border-left: 3px solid var(--text-color);
+  border-right: 3px solid var(--text-color);
+  background-color: var(--accent-color);
   margin: auto;
   display: flex;
   flex-direction: column;
+  margin-top: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 3px var(--text-color);
+  border-radius: 40px 40px 0 0;
+  border-bottom: 0;
 }
 
 #about_body>h2,
@@ -293,28 +303,71 @@ li {
 }
 
 #about_title_card {
-  margin-top: 5em;
   padding: var(--padd);
-  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
   width: 100%;
-  display: grid;
-  grid-template-areas:
-    'a b'
-    'c d';
+  display: flex;
+  justify-content: space-around;
+  aspect-ratio: 3/1;
 }
+
+#about_title_card>img {
+  width: 40%;
+  border: solid 4px var(--text-color);
+  border-radius: 10000px;
+  margin: auto;
+  margin-right: 2em;
+}
+
+#about_title_card>h1 {
+  font-size: 6.5em;
+  margin: auto;
+  margin-left: 1em;
+}
+#about_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#about_nav>a {
+  color: var(--text-color);
+  font-size: 2em;
+}
+@media (max-width: 800px) {
+  #about_title_card {
+    flex-direction: column;
+  }
+
+  #about_title_card>img {
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  #about_title_card>h1 {
+    font-size: 2.5em;
+    margin: auto;
+  }
+
+  #about_nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 1em;
+  }
+}
+
+
 
 #about_card {
   margin: 0 1em 0 1em;
   margin-top: 3em;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  background-color: var(--accent-color);
 }
 
-#about_title_card>img {
-  border-radius: 200px;
-  border: solid 4px var(--text-color);
-  width: 100%;
-  height: 100%;
-  margin: auto;
+#about_nav>p {
+  font-size: .8em;
 }
+
