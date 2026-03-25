@@ -282,7 +282,7 @@ li {
 
 /* about */
 #about_body {
-  width: min(1000px, 90vw);
+  width: min(1000px, 95vw);
   border-left: 3px solid var(--text-color);
   border-right: 3px solid var(--text-color);
   background-color: var(--accent-color);
@@ -365,6 +365,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0.3em;
 }
 
 #about_nav>p {
