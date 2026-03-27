@@ -11,6 +11,7 @@
 
 
 body {
+  overflow-x: hidden;
   font-family: "monaco", sans-serif;
   padding-top: 40px;
   /* background-color: var(--bg-color); */
@@ -22,6 +23,10 @@ body {
       #2a3310 40px);
   background-size: 56px 56px;
   animation: glide 5s linear infinite;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes glide {
@@ -101,8 +106,13 @@ header>#menu-toggle {
   color: var(--text-color);
   font-size: 1.5em;
   text-align: right;
-  padding-right: 2.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5em;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+#mobile-nav>a {
+  font-size: 2em;
 }
 
 #mobile-nav>a.hover,
@@ -123,13 +133,16 @@ header>#menu-toggle {
 #title-img-container {
   position: relative;
   display: block;
+  margin-left: 0;
 }
 
 #title-img {
-  display: block;
-  width: 120%;
+  display: fixed;
+  left: 0;
+  right: 0;
+  width: 100vw;
   object-fit: cover;
-  margin-left: -10%;
+  margin: auto;
   min-height: 20em;
   max-height: 40em;
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -146,10 +159,11 @@ header>#menu-toggle {
 /* the Buttons with information*/
 .preview-button {
   max-width: 1000px;
-  background: var(--accent-color);
+  /* background: var(--accent-color); */
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--radius);
   border: 1px solid transparent;
-  margin: .5em auto;
+  margin: .5em;
   transition: border var(--main-transition)
 }
 
@@ -285,7 +299,6 @@ li {
   width: min(1000px, 95vw);
   border-left: 3px solid var(--text-color);
   border-right: 3px solid var(--text-color);
-  background-color: var(--accent-color);
   margin: auto;
   display: flex;
   flex-direction: column;
