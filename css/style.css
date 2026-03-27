@@ -6,6 +6,7 @@
   --accent-color: #39571c;
   --text-color: #efd8a1;
 
+  --main-transition: 0.3s ease;
 
   --new-bg: rgba(0, 0, 0, 0.5);
 }
@@ -169,7 +170,7 @@ header>#menu-toggle {
   border-radius: var(--radius);
   border: 1px solid transparent;
   margin: .5em;
-  transition: border var(--main-transition)
+  transition: border var(--main-transition);
 }
 
 .preview-button:hover {
