@@ -155,14 +155,25 @@ header>#menu-toggle {
 }
 
 #name-title {
-  position: absolute;
-  font-size: 2.5em;
+  font-size: 5em;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-  right: 20px;
-  top: -10px;
+  left: 1em;
+  top: 1em;
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+
+  #name-title {
+    font-size: 2em;
+  }
 }
 
 /* the Buttons with information*/
+.wrapper-preview-button {
+  text-decoration: none;
+}
+
 .preview-button {
   max-width: 1000px;
   /* background: var(--accent-color); */
@@ -214,10 +225,12 @@ li {
 
 #img1 {
   float: left;
+  max-width: 40%;
 }
 
 #img2 {
   float: right;
+  max-width: 40%;
 }
 
 @media (max-width: 800px) {
@@ -226,6 +239,7 @@ li {
   #img2 {
     float: none;
     width: 100%;
+    max-width: 100%;
   }
 }
 
