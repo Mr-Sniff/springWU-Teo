@@ -72,7 +72,8 @@ header {
 header>h1 {
   color: var(--text-color);
   margin-left: var(--text-margin);
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.0);
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); */
   margin-top: 0em;
 }
 
@@ -114,11 +115,11 @@ header>#menu-toggle {
   text-align: right;
   padding-right: 0.5rem;
   padding-top: 0.5em;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 #mobile-nav>a {
   font-size: 2em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 #mobile-nav>a.hover,
@@ -133,6 +134,7 @@ header>#menu-toggle {
 
   #desktop-nav {
     display: block;
+    padding-top: .2em;
   }
 }
 
@@ -440,16 +442,24 @@ li {
 /* games */
 #games-body {
   width: min(1000px, 95vw);
+  min-height: 100vh;
+
   border-left: 3px solid var(--text-color);
   border-right: 3px solid var(--text-color);
   margin: auto;
+  margin-top: 2em;
+
   display: flex;
   flex-direction: column;
-  margin-top: 2em;
+  justify-content: flex-start;
+  gap: 10px;
+
   background-color: var(--new-bg);
   border: solid 3px var(--text-color);
   border-radius: 40px 40px 0 0;
   border-bottom: 0;
+
+  padding-bottom: 1em;
 }
 
 #games_body>h2,
@@ -462,10 +472,71 @@ li {
   display: flex;
   justify-content: space-around;
   margin-top: 2em;
-  min-height: 100em;
+  height: 70px;
+  gap: 10px;
 }
 
 #games-nav>a {
   font-size: 2em;
   color: var(--text-color);
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+  width: 100%;
+  border-top: solid 3px var(--text-color);
+
+  margin-bottom: 1em;
+}
+
+.game>h2 {
+  font-size: 4em;
+  align-self: center;
+  margin-bottom: .1em;
+  margin-top: .1em;
+}
+
+.game>img {
+  width: 80%;
+  align-self: center;
+  border-radius: 20px;
+  border: solid 3px var(--text-color);
+  margin-top: 1em;
+}
+
+.game>p {
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.game>p>a {
+  color: var(--text-color);
+}
+
+@media (max-width: 800px) {
+  #games-nav {
+    flex-direction: column;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+
+
+  .game>h2 {
+    margin-top: .5em;
+    font-size: 2em;
+  }
+
+  .game>img {
+    width: 95%;
+  }
+
+  .game>p {
+    width: 95%;
+  }
+
 }

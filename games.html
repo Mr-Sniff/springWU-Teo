@@ -9,11 +9,11 @@
 <body>
   <header>
     <h1>Mitt cv</h1>
-    <img src="img/menu (2).png" alt="" id="menu-toggle">
+    <img src="img/menu-button-100.png" alt="" id="menu-toggle">
     <nav id="desktop-nav">
       <a href="index.html">Hem</a>
       <a href="about.html">Om mig</a>
-      <a href="games.html">Spel</a>
+      <a href="games.html">Projekt</a>
       <a href="photo.html">Foto</a>
     </nav>
   </header>
@@ -22,17 +22,40 @@
     <nav id="mobile-nav">
       <a href="index.html">Hem</a>
       <a href="about.html">Om mig</a>
-      <a href="games.html">Spel</a>
+      <a href="games.html">Projekt</a>
       <a href="photo.html">Foto</a>
     </nav>
   </div>
 
   <div id = "games-body">
     <div id = "games-nav">
-      <a href="">Under exposed</a>
-      <a href="">Hooked on speed</a>
+      <a href="#under-exposed-panel">Under exposed</a>
+      <a href="#hooked-on-speed-panel">Hooked on speed</a>
     </div>
+
+    <div class = "game" id = "under-exposed-panel">
+      <h2>[ Under Exposed ]</h2>
+      <img src="img/game_under_exposed.jpg" alt="">
+      <p>
+          Under exposed is a cozy photography game where you take your time, explore intimate environments, chat with locals and capture your perfect shot. You can edit your photos and share your creations on the steam workshop! 
+          <br><br>Med undantaget av några färdigjorda assets och ljudpaket som jag använde i spelet så har jag gjort allting själv. Jag är fortfarande inte riktigt helt färdig men har jobbat på spelet i ungefär ~4-5 månader nu.
+          <br><br><a href="https://store.steampowered.com/app/4591830/Under_Exposed/">Link to steam</a></p
+        >
+    </div>
+
+    <div class = "game" id = "hooked-on-speed-panel">
+      <h2>Hooked On Speed</h2>
+      <img src="img/game_hooked_on_speed.jpg" alt="">
+      <p>
+          Race through 24 thrilling levels in Hooked On Speed! Use speedboosts, jumpboosts, and a grappling hook to hit checkpoints and finish the level as fast as possible. Unlock medals by beating record times, how fast can you go?
+        <br><br>I det här spelet har jag gjort allting sjäv från grafiken till koden jag skrev. Förutom musiken som är från ett paket online. Jag spenderade ungefär ~2 månader på att göra spelet under sommaren 2024 när jag var 16.
+        <br><br><a href="https://store.steampowered.com/app/3208060/Hooked_On_Speed/">Link to steam</a>
+      </p>
+
+    </div>
+
   </div>
 </body>
+  <button onclick="topFunction()" id = "back-to-top-button">↑</button>
   <script src="js/script.js"></script>
 </html>
