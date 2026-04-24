@@ -540,3 +540,59 @@ li {
   }
 
 }
+
+
+.carousel {
+  width: 98%;
+  align-self: center;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent);
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent);
+  overflow-x: hidden;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-group {
+  display: flex;
+  animation: spin 25s infinite linear;
+}
+
+.card {
+  margin-right: 1em;
+  height: 25em;
+
+  border-radius: 20px;
+  border: solid 3px var(--text-color);
+}
+
+
+@media (max-width: 800px) {
+  .card {
+    height: 10em;
+    margin-right: 0.5em;
+  }
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+}
