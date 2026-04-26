@@ -3,6 +3,7 @@
   --text-margin: .2em;
   --radius: 20px;
   --bg-color: #1f240a;
+  --light-bg: #2a3310;
   --accent-color: #39571c;
   --text-color: #efd8a1;
 
@@ -25,8 +26,8 @@ body {
     repeating-linear-gradient(-45deg,
       var(--bg-color),
       var(--bg-color) 20px,
-      #2a3310 20px,
-      #2a3310 40px);
+      var(--light-bg) 20px,
+      var(--light-bg) 40px);
   background-size: 56px 56px;
   animation: glide 5s linear infinite;
   margin: 0;
@@ -55,7 +56,8 @@ li {
 
 header {
   font-size: 1.3em;
-  background: var(--accent-color);
+  /* background: var(--accent-color); */
+  background: var(--light-bg);
   height: 50px;
   position: fixed;
   top: 0;
@@ -145,7 +147,7 @@ header>#menu-toggle {
 }
 
 #title-img {
-  display: fixed;
+  display: block;
   left: 0;
   right: 0;
   width: 100vw;
@@ -223,14 +225,15 @@ li {
   margin: .1em;
   margin-right: .5em;
   border-radius: 10px;
+
 }
 
-#img1 {
+.img1 {
   float: left;
   max-width: 40%;
 }
 
-#img2 {
+.img2 {
   float: right;
   max-width: 40%;
 }
@@ -286,10 +289,11 @@ li {
   display: block;
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 10px;
   border: 2px solid;
-  border-radius: 5px;
   border-color: var(--text-color);
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 1.9);
+  transition: border .1s ease;
 }
 
 .portfolio_photo.fullscreen {
@@ -312,6 +316,7 @@ li {
 
   .portfolio_photo:not(.fullscreen):hover {
     transform: scale(1.2);
+
   }
 }
 
@@ -418,7 +423,6 @@ li {
   right: 1em;
   bottom: -5em;
   transition: bottom .3s ease;
-  padding: auto;
   color: var(--text-color);
   background-color: var(--new-bg);
   border-radius: 200px;
@@ -440,6 +444,19 @@ li {
 }
 
 /* games */
+#games-title {
+  margin: auto;
+  margin-top: .5em;
+  font-size: 4em;
+}
+
+
+@media (max-width: 800px) {
+  #games-title {
+    font-size: 3em;
+  }
+}
+
 #games-body {
   width: min(1000px, 95vw);
   min-height: 100vh;
@@ -472,8 +489,8 @@ li {
   display: flex;
   justify-content: space-around;
   margin-top: 2em;
-  height: 70px;
   gap: 10px;
+  margin-bottom: 1em;
 }
 
 #games-nav>a {
@@ -494,7 +511,7 @@ li {
 }
 
 .game>h2 {
-  font-size: 4em;
+  font-size: 3em;
   align-self: center;
   margin-bottom: .1em;
   margin-top: .1em;
@@ -522,7 +539,6 @@ li {
   #games-nav {
     flex-direction: column;
     margin-left: 1em;
-    margin-bottom: 1em;
   }
 
 
