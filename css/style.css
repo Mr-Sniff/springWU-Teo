@@ -240,8 +240,8 @@ li {
 
 @media (max-width: 800px) {
 
-  #img1,
-  #img2 {
+  .img1,
+  .img2 {
     float: none;
     width: 100%;
     max-width: 100%;
